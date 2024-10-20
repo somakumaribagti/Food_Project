@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block class %}class="sub_page"{% endblock class %}
+
+{% block img %}
+
+{% endblock img %}
+<div class="bg-box">
+    <img src="{% static 'images/hero-bg.jpg' %} " alt="">
+  </div>
+
+{% block main %}
+
+<!-- about section -->
+
+<section class="about_section layout_padding">
+    <div class="container  ">
+    
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="{% static 'images/about-img.png' %} " alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                We Are Foodpanda
+              </h2>
+            </div>
+            <p>
+              Thank you for using Foodpanda. Foodpanda believes in doing the right thing, putting people first, creating inspired solutions, championing our customers, and growing and winning together. Foodpanda's is a purpose-driven company with
+              exceptional people who are committed to feeding the power of possible, one food at a time. At the heart of our brand is a set of values that define our core beliefs on how we run our business,
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    
+    <!-- end about section -->
+
+{% endblock main %}

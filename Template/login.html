@@ -1,0 +1,75 @@
+{% extends "main.html" %}
+{% load static %}
+{% block class %}class="sub_page"{% endblock class %}
+
+{% block main %}
+
+    <head>
+        <title>Signup Page</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white;
+                
+            }
+            button{
+                margin-top: 15px;
+                border: none;
+                text-transform: uppercase;
+                display: inline-block;
+                padding: 10px 55px;
+                background-color: #ffbe33;
+                color: #ffffff;
+                border-radius: 45px;
+               -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+                border: none;
+            }
+
+            .container{
+                position: relative;
+                margin-bottom: 50px;
+                
+            }
+            h1{
+                margin-top: 25px;
+            }
+            
+            label{
+                font-size: 20px;
+            }
+            
+            input[type=uname],input[type=password]{
+                width: 50%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 1px solid #222222;
+                box-sizing: border-box;
+            }
+            button:hover{
+                opacity:0.7;
+
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <center><h1>Login Form</h1></center>
+        <form action="#" method="POST">
+            {% csrf_token %}
+            
+            <center><div class="container">
+                <label for ='uname'><b>username :  </b></label>
+                <input type="uname" placeholder="Enter username" name="uname"   required><br>  
+                <label for='password'><b>Password : </b></label>
+                <input type="password" placeholder="Enter Password" name="password"  required><br>  
+                <button type="submit" value="Enter"><b>Login</b></button><br>     
+                Don't have accounct <a href="http://127.0.0.1:8000/index.html"> register </a>
+            </div></center>
+        </form>
+    </body>
+    
+{% endblock main %}    

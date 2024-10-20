@@ -1,0 +1,80 @@
+{% extends "main.html" %}
+{% load static %}
+{% block class %}class="sub_page"{% endblock class %}
+{% block main %}
+    <head>
+        <title>Signup Page</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white;
+            }
+            button{
+                margin-top: 15px;
+                border: none;
+                text-transform: uppercase;
+                display: inline-block;
+                padding: 10px 55px;
+                background-color: #ffbe33;
+                color: #ffffff;
+                border-radius: 45px;
+               -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+                border: none;
+            }
+            label{
+                font-size: 20px;
+                position: fixed;
+            }
+            .container{
+                position: relative;
+                margin-bottom: 50px;
+                width: 100%;
+            }
+            h1{
+                margin-top: 25px;
+            }
+            
+            input[type=email],input[type=text]{
+                width: 50%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 1px solid #222222;
+                box-sizing: border-box;
+            }
+            
+            button:hover{
+                opacity:0.7;
+
+            }
+            
+           
+        </style>
+                <body>
+                    <center><h1>Register Form</h1></center>
+                    <form action="index.html" method="post">
+                        {% csrf_token %}
+                        
+                        <center><div class="container">
+                            
+                            <b>Username : </b>
+                            <input type='text' placeholder="Enter your  Username" name='uname' required><br>
+                            <b>Email Id :  </b>
+                            <input type="email" placeholder="Enter email" name="email" float="right"  required><br>  
+                            <b>Password : </b>
+                            <input type="text" placeholder="Enter Password" name="password" required><br>
+                            <b>ConfirmPassword : </b>
+                            <input type="text" placeholder="Enter ConfirmPassword" name="confirmpassword" required><br>    
+                            <button type="submit" value="Enter" ><b>Signup</b></button><br>     
+                            Already an accounct <a href="http://localhost:8000/login/"> Login </a>
+                        </div></center>
+                    </form>
+                </body>
+            </html>
+            </div></center> 
+            
+        </form>
+    </body>
+{% endblock main %}
